@@ -10,6 +10,6 @@ export class ListTableComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  }
 
+  }
 }
