@@ -1,2 +1,18 @@
-<app-header></app-header>
-<router-outlet></router-outlet>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="slide" opened="true">
+    Qui va il contenuto del menù
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <mat-toolbar-row>
+        <!-- <p><button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button></p> -->
+        <mat-icon class="example-icon" (click)="sidenav.toggle()">menu</mat-icon>
+        <span>Unloading of Competitors into SOL tanks</span>
+        <span class="example-spacer"></span>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
