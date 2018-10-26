@@ -6,7 +6,12 @@ import {
     MatToolbarModule,
     MatIconModule,
     MatMenuModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule
 } from '@angular/material';
 
 import { NgModule } from '@angular/core';
@@ -19,7 +24,12 @@ import { NgModule } from '@angular/core';
         MatToolbarModule,
         MatIconModule,
         MatMenuModule,
-        MatSidenavModule
+        MatSidenavModule,
+        MatFormFieldModule,
+        MatSelectModule,
+        MatInputModule,
+        MatDatepickerModule,
+        MatNativeDateModule
     ],
     exports: [
         MatButtonModule,
@@ -29,7 +39,12 @@ import { NgModule } from '@angular/core';
         MatToolbarModule,
         MatIconModule,
         MatMenuModule,
-        MatSidenavModule
+        MatSidenavModule,
+        MatFormFieldModule,
+        MatSelectModule,
+        MatInputModule,
+        MatDatepickerModule,
+        MatNativeDateModule
     ],
 })
 export class MaterialModule {
