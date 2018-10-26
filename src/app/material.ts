@@ -5,6 +5,7 @@ import {
     MatExpansionModule,
     MatToolbarModule,
     MatIconModule,
+    MatPaginatorModule,
 } from '@angular/material';
 
 import { NgModule } from '@angular/core';
@@ -16,6 +17,7 @@ imports: [
     MatExpansionModule,
     MatToolbarModule,
     MatIconModule,
+    MatPaginatorModule
 ],
 exports: [
     MatButtonModule, 
@@ -24,6 +26,7 @@ exports: [
     MatExpansionModule,
     MatToolbarModule,
     MatIconModule,
+    MatPaginatorModule
 ],
 })
 export class MaterialModule {

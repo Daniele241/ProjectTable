@@ -1,8 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { TableModel } from '../../../model/table.model';
 import { HttpClient } from '@angular/common/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/RX'
+import { MatTableDataSource, MatPaginator } from '@angular/material';
+
+
+const ELEMENT_DATA: TableModel[] = [
+  new TableModel("asd","asdf","sdf",9,"sdf",new Date(),7),
+  new TableModel("asd","asdf","sdf",9,"sdf",new Date(),7),
+  new TableModel("asd","asdf","sdf",9,"sdf",new Date(),7),
+  new TableModel("asd","asdf","sdf",9,"sdf",new Date(),7),
+  new TableModel("asd","asdf","sdf",9,"sdf",new Date(),7),
+  new TableModel("asd","asdf","sdf",9,"sdf",new Date(),7),
+  new TableModel("asd","asdf","sdf",9,"sdf",new Date(),7),
+  new TableModel("asd","asdf","sdf",9,"sdf",new Date(),7),
+];
 
 @Component({
   selector: 'app-list-table',
@@ -11,12 +24,21 @@ import 'rxjs/RX'
 })
 export class ListTableComponent implements OnInit {
 
-  arrItem: TableModel[] = [];
+  arrTableItem: TableModel[] = [new TableModel("asd","asdf","sdf",9,"sdf",new Date(),7)];
+
+  
+
+  
+  // dataSource = new MatTableDataSource<TableModel>(ELEMENT_DATA);
+  dataSource = ELEMENT_DATA;
+  @ViewChild(MatPaginator) paginator: MatPaginator;
 
   constructor(private httpClient: HttpClient) { }
 
   ngOnInit() {
     this.getItem();
+    // this.dataSource.paginator = this.paginator;
+
   }
 
   getItem() {
@@ -36,9 +58,11 @@ export class ListTableComponent implements OnInit {
       item.Date,
       item.document,
     );
-
-    result.push(currentItem); } return result; }) .subscribe(
-    (result: TableModel[]) => {
-    console.log(result); this.arrItem = result; } );
-    }
+    result.push(currentItem); 
+  } 
+  return result; }) .subscribe(
+  (result: TableModel[]) => {
+  // this.dataSource.data = result; 
+} );
+  } 
 }

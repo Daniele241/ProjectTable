@@ -1,3 +1,50 @@
-<p>
-  item-table works!
-</p>
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource">
+    <!-- Plant Column -->
+    <ng-container matColumnDef="plant">
+      <th mat-header-cell *matHeaderCellDef> Plant </th>
+      <td mat-cell *matCellDef="let element"> {{element.plant}} </td>
+    </ng-container>
+
+    <!-- Competitor code Column -->
+    <ng-container matColumnDef="competitorCode">
+      <th mat-header-cell *matHeaderCellDef> Competitor Code </th>
+      <td mat-cell *matCellDef="let element"> {{element.competitorCode}} </td>
+    </ng-container>
+
+    <!-- Competitor Column -->
+    <ng-container matColumnDef="competitor">
+      <th mat-header-cell *matHeaderCellDef> Competitor </th>
+      <td mat-cell *matCellDef="let element"> {{element.competitor}} </td>
+    </ng-container>
+
+    <!-- Product code Column -->
+    <ng-container matColumnDef="productCode">
+      <th mat-header-cell *matHeaderCellDef> Product code </th>
+      <td mat-cell *matCellDef="let element"> {{element.productCode}} </td>
+    </ng-container>
+
+    <!-- Product Column -->
+    <ng-container matColumnDef="product">
+      <th mat-header-cell *matHeaderCellDef> Product </th>
+      <td mat-cell *matCellDef="let element"> {{element.product}} </td>
+    </ng-container>
+
+    <!-- Date Column -->
+    <ng-container matColumnDef="date">
+      <th mat-header-cell *matHeaderCellDef> Date </th>
+      <td mat-cell *matCellDef="let element"> {{element.Date}} </td>
+    </ng-container>
+
+    <!-- Document Column -->
+    <ng-container matColumnDef="document">
+      <th mat-header-cell *matHeaderCellDef> Document </th>
+      <td mat-cell *matCellDef="let element"> {{element.document}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>
