@@ -22,9 +22,6 @@ export class ItemTableComponent implements OnInit {
     'document'
   ];
   arrTableItem: TableModel[] = [new TableModel("asd","asdf","sdf",9,"sdf",new Date(),7)];
-
-  
-
   
   dataSource = new MatTableDataSource<TableModel>();
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -33,8 +30,7 @@ export class ItemTableComponent implements OnInit {
 
   ngOnInit() {
     this.getItem();
-    // this.dataSource.paginator = this.paginator;
-
+    this.dataSource.paginator = this.paginator;
   }
 
   getItem() {
