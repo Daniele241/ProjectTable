@@ -1,2 +1,50 @@
-<app-header></app-header> <br> <br>
-<router-outlet></router-outlet>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="slide" opened="true">
+    <mat-toolbar color="primary">
+      <span>Filter</span>
+      <!-- This fills the remaining space of the current row -->
+      <span class="spacer"></span>
+      <i class="material-icons menu-icon" (click)="sidenav.toggle()">cancel</i>
+    </mat-toolbar>
+
+    <div class="form-menu-container">
+      <mat-form-field>
+        <input matInput placeholder="Document">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Plant">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Competitor">
+      </mat-form-field>
+
+      <mat-form-field class="date">
+        <input matInput [matDatepicker]="picker1" required placeholder="Period from">
+        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+        <mat-datepicker #picker1></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field class="date">
+        <input matInput [matDatepicker]="picker2" required placeholder="to">
+        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+        <mat-datepicker #picker2></mat-datepicker>
+      </mat-form-field>
+    </div>
+
+
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <mat-toolbar-row>
+        <mat-icon class="menu-icon" (click)="sidenav.toggle()">menu</mat-icon>
+        <span>Unloading of Competitors into SOL tanks</span>
+        <span class="spacer"></span>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
