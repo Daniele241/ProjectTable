@@ -6,7 +6,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material';
-import { HeaderComponent } from './header/header.component';
 import { TableComponent } from './table/table.component';
 import { ListTableComponent } from './table/list-table/list-table.component';
 import { ItemTableComponent } from './table/item-table/item-table.component';
@@ -14,7 +13,6 @@ import { ItemTableComponent } from './table/item-table/item-table.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     TableComponent,
     ListTableComponent,
     ItemTableComponent
