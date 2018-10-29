@@ -20,18 +20,34 @@
         <input matInput placeholder="Competitor">
       </mat-form-field>
 
-      <mat-form-field class="date">
-        <input matInput [matDatepicker]="picker1" required placeholder="Period from">
-        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
-        <mat-datepicker #picker1></mat-datepicker>
-      </mat-form-field>
+      <div class="datepicker-container">
+        <mat-form-field class="date">
+          <input matInput [matDatepicker]="picker1" required placeholder="Period from">
+          <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+          <mat-datepicker #picker1></mat-datepicker>
+        </mat-form-field>
 
-      <mat-form-field class="date">
-        <input matInput [matDatepicker]="picker2" required placeholder="to">
-        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
-        <mat-datepicker #picker2></mat-datepicker>
-      </mat-form-field>
+        <mat-form-field class="date">
+          <input matInput [matDatepicker]="picker2" required placeholder="to">
+          <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+          <mat-datepicker #picker2></mat-datepicker>
+        </mat-form-field>
+      </div>
+
+      <div class="button-row">
+        <button mat-raised-button color="primary">Clear<i class="ml-2 material-icons">
+            close
+          </i></button>
+
+
+        <div class="float-right">
+          <button mat-raised-button color="primary">Search<i class="ml-2 material-icons">
+              search
+            </i></button>
+        </div>
+      </div>
     </div>
+
 
 
   </mat-sidenav>
