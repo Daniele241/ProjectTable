@@ -1,7 +1,11 @@
-import { Component, OnInit, Input, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { TableModel } from '../../../model/table.model';
 import { MatTableDataSource, MatPaginator } from '@angular/material';
 import { HttpClient } from '@angular/common/http';
+
+import 'rxjs/add/operator/map';
+import 'rxjs/RX'
+
 
 @Component({
   selector: 'app-item-table',
@@ -9,8 +13,6 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./item-table.component.scss']
 })
 export class ItemTableComponent implements OnInit {
-
-  @Input() table: TableModel[] = [];
 
   displayedColumns: string[] = [
     'plant',
@@ -21,7 +23,7 @@ export class ItemTableComponent implements OnInit {
     'date',
     'document'
   ];
-  arrTableItem: TableModel[] = [new TableModel("asd","asdf","sdf",9,"sdf",new Date(),7)];
+  arrTableItem: TableModel[] = [];
   
   dataSource = new MatTableDataSource<TableModel>();
   @ViewChild(MatPaginator) paginator: MatPaginator;
