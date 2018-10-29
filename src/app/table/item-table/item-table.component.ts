@@ -6,7 +6,6 @@ import { HttpClient } from '@angular/common/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/RX'
 
-
 @Component({
   selector: 'app-item-table',
   templateUrl: './item-table.component.html',
@@ -21,7 +20,9 @@ export class ItemTableComponent implements OnInit {
     'productCode',
     'product',
     'date',
-    'document'
+    'document',
+    'edit',
+    'delete'
   ];
   arrTableItem: TableModel[] = [];
   
