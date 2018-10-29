@@ -11,6 +11,7 @@ import { TableComponent } from './table/table.component';
 import { ListTableComponent } from './table/list-table/list-table.component';
 import { ItemTableComponent } from './table/item-table/item-table.component';
 import { EditRowComponent } from './table/edit-row/edit-row.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { EditRowComponent } from './table/edit-row/edit-row.component';
     TableComponent,
     ListTableComponent,
     ItemTableComponent,
-    EditRowComponent
+    EditRowComponent,
+    SidenavComponent
   ],
   imports: [
     BrowserModule,
