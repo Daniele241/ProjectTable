@@ -10,13 +10,15 @@ import { MaterialModule } from './material';
 import { TableComponent } from './table/table.component';
 import { ListTableComponent } from './table/list-table/list-table.component';
 import { ItemTableComponent } from './table/item-table/item-table.component';
+import { EditRowComponent } from './table/edit-row/edit-row.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TableComponent,
     ListTableComponent,
-    ItemTableComponent
+    ItemTableComponent,
+    EditRowComponent
   ],
   imports: [
     BrowserModule,
