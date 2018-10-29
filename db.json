@@ -1,103 +1,54 @@
 {
   "items": [
-      { 
-          "plant": "Milano1", 
-          "competitorCode": "1r", 
-          "competitor": "Air flow",
-          "productCode": 4, 
-          "product": " - ", 
-          "Date": "24/01/1997", 
-          "document": 123
-      },
-
-      { 
-          "plant": "Milano", 
-          "competitorCode": "1r", 
-          "competitor": "Air flow",
-          "productCode": 4, 
-          "product": " - ", 
-          "Date": "24/01/1997", 
-          "document": 123
-      },
-
-      { 
-          "plant": "Milano", 
-          "competitorCode": "1r", 
-          "competitor": "Air flow",
-          "productCode": 4, 
-          "product": " - ", 
-          "Date": "24/01/1997", 
-          "document": 123
-      },
-
-      { 
-          "plant": "Milano", 
-          "competitorCode": "1r", 
-          "competitor": "Air flow",
-          "productCode": 4, 
-          "product": " - ", 
-          "Date": "24/01/1997", 
-          "document": 123
-      },
-
-      { 
-          "plant": "Milano", 
-          "competitorCode": "1r", 
-          "competitor": "Air flow",
-          "productCode": 4, 
-          "product": " - ", 
-          "Date": "24/01/1997", 
-          "document": 123
-      },
-
-      { 
-          "plant": "Milano", 
-          "competitorCode": "1r", 
-          "competitor": "Air flow",
-          "productCode": 4, 
-          "product": " - ", 
-          "Date": "24/01/1997", 
-          "document": 123
-      },
-
-      { 
-          "plant": "Milano", 
-          "competitorCode": "1r", 
-          "competitor": "Air flow",
-          "productCode": 4, 
-          "product": " - ", 
-          "Date": "24/01/1997", 
-          "document": 123
-      },
-
-      { 
-          "plant": "Milano", 
-          "competitorCode": "1r", 
-          "competitor": "Air flow",
-          "productCode": 4, 
-          "product": " - ", 
-          "Date": "24/01/1997", 
-          "document": 123
-      },
-
-      { 
-          "plant": "Milano", 
-          "competitorCode": "1r", 
-          "competitor": "Air flow",
-          "productCode": 4, 
-          "product": " - ", 
-          "Date": "24/01/1997", 
-          "document": 123
-      },
-
-      { 
-          "plant": "Milano", 
-          "competitorCode": "1r", 
-          "competitor": "Air flow",
-          "productCode": 4, 
-          "product": " - ", 
-          "Date": "24/01/1997", 
-          "document": 123
-      }
+    {
+      "id": 1,
+      "plant": "Milano1",
+      "competitorCode": "1r",
+      "competitor": "Air flow",
+      "productCode": 4,
+      "product": " - ",
+      "Date": "24/01/1997",
+      "document": 123
+    },
+    {
+      "id": 2,
+      "plant": "Milano2",
+      "competitorCode": "1r",
+      "competitor": "Air flow",
+      "productCode": 4,
+      "product": " - ",
+      "Date": "24/01/1997",
+      "document": 123
+    },
+    {
+      "id": 3,
+      "plant": "Milano3",
+      "competitorCode": "1r",
+      "competitor": "Air flow",
+      "productCode": 4,
+      "product": " - ",
+      "Date": "24/01/1997",
+      "document": 123
+    },
+    {
+      "id": 4,
+      "plant": "Milano4",
+      "competitorCode": "1r",
+      "competitor": "Air flow",
+      "productCode": 4,
+      "product": " - ",
+      "Date": "24/01/1997",
+      "document": 123
+    },
+    {
+      "id": 7,
+      "plant": "Milano7",
+      "competitorCode": "1r",
+      "competitor": "Air flow",
+      "productCode": 4,
+      "product": " - ",
+      "Date": "24/01/1997",
+      "document": 123
+    }
   ]
 }
