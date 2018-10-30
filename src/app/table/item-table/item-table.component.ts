@@ -6,6 +6,7 @@ import { Headers } from '@angular/http';
 
 import 'rxjs/add/operator/map';
 import 'rxjs/RX';
+import { SelectionModel } from '@angular/cdk/collections';
 
 let headers = new Headers({ 'Content-Type': 'application/json' });
 //let options = new RequestOptions({ headers: headers });
@@ -16,6 +17,8 @@ let headers = new Headers({ 'Content-Type': 'application/json' });
   styleUrls: ['./item-table.component.scss']
 })
 export class ItemTableComponent implements OnInit {
+
+  selection = new SelectionModel<TableModel>(true, [])
 
   displayedColumns: string[] = [
     'plant',
@@ -40,18 +43,28 @@ export class ItemTableComponent implements OnInit {
   }
 
   deleteItem(id: TableModel): void {
+    /* this.httpClient.delete("http://localhost:3000/items/" + id.id)
+    .subscribe(
+      (res: any[]) => {
+        res = this.dataSource.data = this.dataSource.data.filter(item => item.id !== id.id)
+        console.log(res);
+      }
+    )  */
+
     this.httpClient.delete("http://localhost:3000/items/" + id.id)
     .subscribe(
       (res: any[]) => {
-        //this.dataSource.data.splice(id.id, 1);
-        this.getItem();
+        const allElement = this.dataSource.data;
+        console.log(allElement);
+        this.dataSource.data.splice(this.dataSource.data.indexOf(id), 1);
+        console.log(allElement);
+        this.dataSource.data = allElement;
       }
-    )    
+    ) 
   }
 
   getItem() {
     this.httpClient.get('http://localhost:3000/items')
-    //this.httpClient.get('http://localhost:60634/api/competitor') 
     .map((response: any) => {
 
     const res = response;
