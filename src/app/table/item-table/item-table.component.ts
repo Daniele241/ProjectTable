@@ -87,7 +87,6 @@ export class ItemTableComponent implements OnInit {
 
     for(let item of res) {
       const currentItem = new TableModel(
-        item.id,
         item.plant, 
         item.competitorCode,
         item.competitor,
