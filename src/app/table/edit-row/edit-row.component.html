@@ -12,15 +12,15 @@
   </mat-form-field>
 
   <mat-form-field class="date">
-    <input matInput [matDatepicker]="picker1" required placeholder="Date of unloading">
-    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
-    <mat-datepicker #picker1></mat-datepicker>
+    <input matInput [matDatepicker]="dp" placeholder="Verbose datepicker">
+    <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+    <mat-datepicker #dp></mat-datepicker>
   </mat-form-field>
 
   <div class="peso">
     <div class="quantity">
       <mat-form-field hintLabel="Max 10 numbers">
-        <input type="number" matInput #input maxlength="10" required placeholder="Quantity">
+        <input type="number" matInput #input [maxLength]="maxlength" required placeholder="Quantity">
       </mat-form-field>
     </div>
 
@@ -34,7 +34,7 @@
   </div>
 
   <mat-form-field hintLabel="Max 20 characters">
-    <input matInput required placeholder="Document Number">
+    <input maxlength="20" matInput required placeholder="Document Number">
   </mat-form-field>
 </div>
 <hr>
