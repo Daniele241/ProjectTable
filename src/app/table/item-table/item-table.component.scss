@@ -1,3 +1,17 @@
 table {
-    width: 100%;
+  width: 100%;
+}
+
+@-moz-document url-prefix() {
+  .cancella {
+    border: none;
+    background-color: transparent;
+  }
+}
+
+@media not all and (min-resolution:.001dpcm) {
+  .cancella {
+    border: none;
+    background-color: transparent;
+  }
 }
