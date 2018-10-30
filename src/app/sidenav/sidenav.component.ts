@@ -3,7 +3,7 @@ import { FormControl } from '@angular/forms';
 import { MomentDateAdapter } from '@angular/material-moment-adapter';
 import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material';
 import * as _moment from 'moment';
-import { default as _rollupMoment } from 'moment';
+import * as _rollupMoment  from 'moment';
 
 const moment = _rollupMoment || _moment;
 
