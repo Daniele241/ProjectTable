@@ -1,0 +1,54 @@
+<div class="container edit-form">
+  <mat-form-field>
+    <input matInput placeholder="Plant">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Competitor">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Product">
+  </mat-form-field>
+
+  <mat-form-field class="date">
+    <input matInput [matDatepicker]="dp" placeholder="Verbose datepicker">
+    <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+    <mat-datepicker #dp></mat-datepicker>
+  </mat-form-field>
+
+  <div class="peso">
+    <div class="quantity">
+      <mat-form-field hintLabel="Max 10 numbers">
+        <input type="number" matInput #input [maxLength]="maxlength" required placeholder="Quantity">
+      </mat-form-field>
+    </div>
+
+    <div class="float-right">
+      <mat-form-field>
+        <mat-select required placeholder="UoM">
+          <mat-option value="kg">KG</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <mat-form-field hintLabel="Max 20 characters">
+    <input maxlength="20" matInput required placeholder="Document Number">
+  </mat-form-field>
+</div>
+<hr>
+
+<div class="container">
+  <div class="float-right">
+    <button mat-raised-button color="primary">Cancel<i class="ml-2 material-icons">
+        arrow_back
+      </i>
+    </button>
+    <button class="ml-4" mat-raised-button disabled color="primary">Save<i class="ml-2 material-icons">
+        save
+      </i>
+    </button>
+
+  </div>
+</div>
