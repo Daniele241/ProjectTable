@@ -51,16 +51,26 @@ export class ItemTableComponent implements OnInit {
       }
     )  */
 
-    this.httpClient.delete("http://localhost:3000/items/" + id.id)
+     /* this.httpClient.delete("http://localhost:3000/items/" + id.id)
     .subscribe(
       (res: any[]) => {
-        const allElement = this.dataSource.data;
-        console.log(allElement);
-        this.dataSource.data.splice(this.dataSource.data.indexOf(id), 1);
-        console.log(allElement);
-        this.dataSource.data = allElement;
+        this.getItem();
       }
-    ) 
+    )  */
+
+    if(confirm("Confermi di volere eliminare la riga con id " +id.id + "?")) {
+      this.httpClient.delete("http://localhost:3000/items/" + id.id)
+      .subscribe(
+        (res: any[]) => {
+          const allElement = this.dataSource.data;
+          console.log(allElement);
+          this.dataSource.data.splice(this.dataSource.data.indexOf(id), 1);
+          console.log(allElement);
+          res = allElement;
+          this.dataSource.data = res;
+        }
+      ) 
+    }
   }
 
   getItem() {

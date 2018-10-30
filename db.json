@@ -39,6 +39,26 @@
       "product": " - ",
       "Date": "24/01/1997",
       "document": 123
+    },
+    {
+      "id": 5,
+      "plant": "Milano5",
+      "competitorCode": "1r",
+      "competitor": "Air flow",
+      "productCode": 4,
+      "product": " - ",
+      "Date": "24/01/1997",
+      "document": 123
+    },
+    {
+      "id": 6,
+      "plant": "Milano6",
+      "competitorCode": "1r",
+      "competitor": "Air flow",
+      "productCode": 4,
+      "product": " - ",
+      "Date": "24/01/1997",
+      "document": 123
     }
   ]
 }
