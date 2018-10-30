@@ -54,8 +54,7 @@ export class EditRowComponent implements OnInit {
               private router: Router
               ) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   onCancel() {
     this.router.navigate(['/table']);

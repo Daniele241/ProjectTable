@@ -1,66 +1,6 @@
 {
   "items": [
     {
-      "id": 1,
-      "plant": "Milano1",
-      "competitorCode": "1r",
-      "competitor": "Air flow",
-      "productCode": 4,
-      "product": " - ",
-      "Date": "24/01/1997",
-      "document": 123
-    },
-    {
-      "id": 2,
-      "plant": "Milano2",
-      "competitorCode": "1r",
-      "competitor": "Air flow",
-      "productCode": 4,
-      "product": " - ",
-      "Date": "24/01/1997",
-      "document": 123
-    },
-    {
-      "id": 3,
-      "plant": "Milano3",
-      "competitorCode": "1r",
-      "competitor": "Air flow",
-      "productCode": 4,
-      "product": " - ",
-      "Date": "24/01/1997",
-      "document": 123
-    },
-    {
-      "id": 4,
-      "plant": "Milano4",
-      "competitorCode": "1r",
-      "competitor": "Air flow",
-      "productCode": 4,
-      "product": " - ",
-      "Date": "24/01/1997",
-      "document": 123
-    },
-    {
-      "id": 5,
-      "plant": "Milano5",
-      "competitorCode": "1r",
-      "competitor": "Air flow",
-      "productCode": 4,
-      "product": " - ",
-      "Date": "24/01/1997",
-      "document": 123
-    },
-    {
-      "id": 6,
-      "plant": "Milano6",
-      "competitorCode": "1r",
-      "competitor": "Air flow",
-      "productCode": 4,
-      "product": " - ",
-      "Date": "24/01/1997",
-      "document": 123
-    },
-    {
       "id": 7,
       "plant": "ciao",
       "competitorCode": "ciao",
@@ -89,6 +29,36 @@
       "Date": "2018-10-25T22:00:00.000Z",
       "document": "123",
       "id": 9
+    },
+    {
+      "plant": "Daniele",
+      "competitorCode": "Daniele",
+      "competitor": "Daniele",
+      "productCode": "1111",
+      "product": "Daniele",
+      "Date": "2018-10-17T22:00:00.000Z",
+      "document": "1234",
+      "id": 10
+    },
+    {
+      "plant": "    constructor",
+      "competitorCode": "    constructor",
+      "competitor": "    constructor",
+      "productCode": "123",
+      "product": "    constructor",
+      "Date": "2018-10-17T22:00:00.000Z",
+      "document": "12242365",
+      "id": 11
+    },
+    {
+      "plant": "Ciao 1",
+      "competitorCode": "Ciao 2",
+      "competitor": "Ciao 2",
+      "productCode": "2",
+      "product": "Ciao 2",
+      "Date": "2018-10-17T22:00:00.000Z",
+      "document": "21312543",
+      "id": 12
     }
   ]
 }

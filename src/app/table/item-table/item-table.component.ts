@@ -63,8 +63,8 @@ export class ItemTableComponent implements OnInit {
       }
     )  */
 
-    if(confirm("Confermi di volere eliminare la riga con id " +id + "?")) {
-      this.httpClient.delete("http://localhost:3000/items/" + id)
+    if(confirm("Confermi di volere eliminare la riga con id " +id.id + "?")) {
+      this.httpClient.delete("http://localhost:3000/items/" + id.id)
       .subscribe(
         (res: any[]) => {
           const allElement = this.dataSource.data;
@@ -94,6 +94,7 @@ export class ItemTableComponent implements OnInit {
         item.product,
         item.Date,
         item.document,
+        item.id
       );
       result.push(currentItem); 
     } 

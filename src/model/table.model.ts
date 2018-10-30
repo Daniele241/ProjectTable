@@ -6,6 +6,7 @@ export class TableModel {
         public productCode: number,
         public product: string,
         public Date: Date,
-        public document: number
+        public document: number,
+        public id?: number
     ) {}
 }
