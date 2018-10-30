@@ -12,6 +12,7 @@ import { ListTableComponent } from './table/list-table/list-table.component';
 import { ItemTableComponent } from './table/item-table/item-table.component';
 import { EditRowComponent } from './table/edit-row/edit-row.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     FormsModule,
     ReactiveFormsModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,26 +1,26 @@
 <div class="container edit-form">
   <mat-form-field>
-    <input matInput placeholder="Plant">
+    <input matInput placeholder="Plant" [(ngModel)]="plant">
   </mat-form-field>
 
   <mat-form-field>
-    <input matInput placeholder="Competitor Code">
+    <input matInput placeholder="Competitor Code" [(ngModel)]="competitorCode">
   </mat-form-field>
 
   <mat-form-field>
-    <input matInput placeholder="Competitor">
+    <input matInput placeholder="Competitor" [(ngModel)]="competitor">
   </mat-form-field>
 
   <mat-form-field>
-    <input matInput placeholder="Product code">
+    <input matInput placeholder="Product code" [(ngModel)]="productCode">
   </mat-form-field>
 
   <mat-form-field>
-    <input matInput placeholder="Product">
+    <input matInput placeholder="Product" [(ngModel)]="product">
   </mat-form-field>
 
   <mat-form-field class="date">
-    <input matInput [matDatepicker]="dp" placeholder="Date">
+    <input matInput [matDatepicker]="dp" placeholder="Date" [(ngModel)]="_date">
     <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
     <mat-datepicker #dp></mat-datepicker>
   </mat-form-field>
@@ -42,21 +42,25 @@
   </div> -->
 
   <mat-form-field>
-    <input matInput required placeholder="Document Number">
+    <input matInput required placeholder="Document Number" [(ngModel)]="document">
   </mat-form-field>
 </div>
 <hr>
 
 <div class="container">
   <div class="float-right">
-    <button mat-raised-button color="primary">Cancel<i class="ml-2 material-icons">
-        arrow_back
-      </i>
-    </button>
-    <button class="ml-4" mat-raised-button disabled color="primary">Save<i class="ml-2 material-icons">
-        save
-      </i>
-    </button>
+      <button (click)="onCancel()" mat-raised-button color="primary">Cancel<i class="ml-2 material-icons">
+          arrow_back
+        </i>
+      </button>
 
+    <button 
+      class="ml-4" 
+      mat-raised-button color="primary" (click)="onPost()"> 
+        Save
+        <i class="ml-2 material-icons">
+          save
+        </i>
+    </button>
   </div>
 </div>

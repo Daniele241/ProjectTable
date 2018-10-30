@@ -7,6 +7,7 @@ import { Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/RX';
 import { SelectionModel } from '@angular/cdk/collections';
+import { AddEditService } from '../../../service/add-edit.service';
 
 let headers = new Headers({ 'Content-Type': 'application/json' });
 //let options = new RequestOptions({ headers: headers });
@@ -35,11 +36,15 @@ export class ItemTableComponent implements OnInit {
   dataSource = new MatTableDataSource<TableModel>();
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private addEditService: AddEditService, 
+              private httpClient: HttpClient) { }
 
   ngOnInit() {
     this.getItem();
     this.dataSource.paginator = this.paginator;
+    this.addEditService.eventEmit.subscribe(
+      (post: TableModel) => this.dataSource.data.push(post)
+    )
   }
 
   deleteItem(id: TableModel): void {
@@ -58,8 +63,8 @@ export class ItemTableComponent implements OnInit {
       }
     )  */
 
-    if(confirm("Confermi di volere eliminare la riga con id " +id.id + "?")) {
-      this.httpClient.delete("http://localhost:3000/items/" + id.id)
+    if(confirm("Confermi di volere eliminare la riga con id " +id + "?")) {
+      this.httpClient.delete("http://localhost:3000/items/" + id)
       .subscribe(
         (res: any[]) => {
           const allElement = this.dataSource.data;

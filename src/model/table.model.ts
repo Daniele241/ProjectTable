@@ -1,6 +1,6 @@
 export class TableModel { 
     constructor(
-        public id: number,
+        //public id: number,
         public plant: string,
         public competitorCode: string,
         public competitor: string,
