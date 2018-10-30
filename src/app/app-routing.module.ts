@@ -7,7 +7,8 @@ const routes: Routes = [
   { path: '', component: TableComponent },
   { path: 'table', component: TableComponent },
   { path: 'edit-item', component: EditRowComponent },
-  { path: 'add-item', component: EditRowComponent},
+  { path: 'add-item', component: EditRowComponent },
+  { path: '**', component: TableComponent }
 ];
 
 @NgModule({
