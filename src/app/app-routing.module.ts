@@ -6,7 +6,8 @@ import { EditRowComponent } from './table/edit-row/edit-row.component';
 const routes: Routes = [
   { path: '', component: TableComponent },
   { path: 'table', component: TableComponent },
-  { path: 'edit-table', component: EditRowComponent }
+  { path: 'edit-item', component: EditRowComponent },
+  { path: 'add-item', component: EditRowComponent},
 ];
 
 @NgModule({
