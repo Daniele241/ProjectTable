@@ -10,9 +10,13 @@ table {
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
-  .cancella {
+  .btn-table {
     border: none;
     background-color: transparent;
+  }
+
+  .btn-table:active {
+    color: #0069d9;
   }
 }
 
