@@ -1,31 +1,32 @@
 <div class="container edit-form">
-  <mat-form-field>
-    <input matInput placeholder="Plant" [(ngModel)]="plant">
-  </mat-form-field>
+  <form name="myForm">
+    <mat-form-field>
+      <input matInput placeholder="Plant" name="plant" [(ngModel)]="plant">
+    </mat-form-field>
 
-  <mat-form-field>
-    <input matInput placeholder="Competitor Code" [(ngModel)]="competitorCode">
-  </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Competitor Code" name="competitorCode" [(ngModel)]="competitorCode">
+    </mat-form-field>
 
-  <mat-form-field>
-    <input matInput placeholder="Competitor" [(ngModel)]="competitor">
-  </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Competitor" name="competitor" [(ngModel)]="competitor">
+    </mat-form-field>
 
-  <mat-form-field>
-    <input matInput placeholder="Product code" [(ngModel)]="productCode">
-  </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Product code" name="productCode" [(ngModel)]="productCode">
+    </mat-form-field>
 
-  <mat-form-field>
-    <input matInput placeholder="Product" [(ngModel)]="product">
-  </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Product" name="product" [(ngModel)]="product">
+    </mat-form-field>
 
-  <mat-form-field class="date">
-    <input matInput [matDatepicker]="dp" placeholder="Date" [(ngModel)]="_date">
-    <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
-    <mat-datepicker #dp></mat-datepicker>
-  </mat-form-field>
+    <mat-form-field class="date">
+      <input matInput [matDatepicker]="dp" placeholder="Date" name="_date" [(ngModel)]="_date">
+      <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+      <mat-datepicker #dp></mat-datepicker>
+    </mat-form-field>
 
-  <!-- <div class="peso">
+    <!-- <div class="peso">
     <div class="quantity">
       <mat-form-field hintLabel="Max 10 numbers">
         <input type="number" matInput #input [maxLength]="maxlength" required placeholder="Quantity">
@@ -41,26 +42,26 @@
     </div>
   </div> -->
 
-  <mat-form-field>
-    <input matInput required placeholder="Document Number" [(ngModel)]="document">
-  </mat-form-field>
-</div>
-<hr>
+    <mat-form-field>
+      <input matInput required placeholder="Document Number" name="document" [(ngModel)]="document">
+    </mat-form-field>
 
-<div class="container">
-  <div class="float-right">
-      <button (click)="onCancel()" mat-raised-button color="primary">Cancel<i class="ml-2 material-icons">
-          arrow_back
-        </i>
-      </button>
+    <hr>
 
-    <button 
-      class="ml-4" 
-      mat-raised-button color="primary" (click)="onPost()"> 
-        Save
-        <i class="ml-2 material-icons">
-          save
-        </i>
-    </button>
-  </div>
+    <div class="container">
+      <div class="float-right">
+        <button (click)="onCancel()" mat-raised-button color="primary">Cancel<i class="ml-2 material-icons">
+            arrow_back
+          </i>
+        </button>
+
+        <button class="ml-4" disabled mat-raised-button color="primary" (click)="onPost()">
+          Save
+          <i class="ml-2 material-icons">
+            save
+          </i>
+        </button>
+      </div>
+    </div>
+  </form>
 </div>
