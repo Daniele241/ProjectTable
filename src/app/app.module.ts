@@ -13,6 +13,7 @@ import { ItemTableComponent } from './table/item-table/item-table.component';
 import { EditRowComponent } from './table/edit-row/edit-row.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { HttpModule } from '@angular/http';
+import { ComposedPageComponent } from './composed-page/composed-page.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HttpModule } from '@angular/http';
     ListTableComponent,
     ItemTableComponent,
     EditRowComponent,
-    SidenavComponent
+    SidenavComponent,
+    ComposedPageComponent
   ],
   imports: [
     BrowserModule,

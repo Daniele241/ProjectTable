@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, OnDestroy } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { MomentDateAdapter } from '@angular/material-moment-adapter';
 import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material';
@@ -6,9 +6,9 @@ import * as _moment from 'moment';
 import * as _rollupMoment from 'moment';
 import { TableModel } from '../../../model/table.model';
 import { AddEditService } from '../../../service/add-edit.service';
-import { HttpClient } from '@angular/common/http';
 import { RequestOptions, Headers, Http } from '@angular/http';
-import { Route, Router } from '@angular/router';
+import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 const moment = _rollupMoment || _moment;
 let url = "http://localhost:3000/items";
@@ -37,24 +37,60 @@ export const MY_FORMATS = {
   ],
 })
 
-export class EditRowComponent implements OnInit {
+export class EditRowComponent implements OnInit, OnDestroy {
+  @Input() Mode : string = "";
+  public isUpdate: boolean;
+  sub: Subscription;
+
+  row: TableModel;
 
   date = new FormControl(moment());
 
-  plant: string;
-  competitorCode: string;
-  competitor: string;
+  plant: string = ""
+  competitorCode: string = "";
+  competitor: string = "";
   productCode: number;
-  product: string;
+  product: string = "";
   _date: Date;
   document: number;
 
   constructor(private httpClient:Http,
               private addEditService: AddEditService,
-              private router: Router
+              private router: Router,
               ) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    if(this.Mode == "edit") {
+
+    }
+    /* this.addEditService.eventEmit.subscribe(result => {
+      const rowCurrent = result;
+      const updateRow = new TableModel(
+        rowCurrent.plant,
+        rowCurrent.competitorCode,
+        rowCurrent.competitor,
+        rowCurrent.productCode,
+        rowCurrent.product,
+        rowCurrent.date,
+        rowCurrent.document,
+        rowCurrent.id
+      )
+      this.isUpdate = true;
+      this.row = updateRow;
+    }) */
+    this.updateRow();
+  }
+
+  ngOnDestroy() {
+    this.sub.unsubscribe();
+  }
+
+  updateRow() {
+    this.sub = this.addEditService.eventEmit.subscribe((response) => {
+        this.row = response;
+        this.isUpdate = true;
+    });
+  }
 
   onCancel() {
     this.router.navigate(['/table']);
@@ -73,7 +109,7 @@ export class EditRowComponent implements OnInit {
     )
     this.addEditService.AddRow(newRow);
 
-    this.httpClient.post(url, newRow, options)
+    this.sub = this.httpClient.post(url, newRow, options)
     .subscribe(
       (error) => console.log(error)
     )

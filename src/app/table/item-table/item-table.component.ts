@@ -8,6 +8,8 @@ import 'rxjs/add/operator/map';
 import 'rxjs/RX';
 import { SelectionModel } from '@angular/cdk/collections';
 import { AddEditService } from '../../../service/add-edit.service';
+import { Router } from '@angular/router';
+import { Subscription } from 'rxjs/RX';
 
 let headers = new Headers({ 'Content-Type': 'application/json' });
 //let options = new RequestOptions({ headers: headers });
@@ -17,8 +19,9 @@ let headers = new Headers({ 'Content-Type': 'application/json' });
   templateUrl: './item-table.component.html',
   styleUrls: ['./item-table.component.scss']
 })
-export class ItemTableComponent implements OnInit {
+export class ItemTableComponent implements OnInit, OnDestroy {
 
+  sub: Subscription;
   selection = new SelectionModel<TableModel>(true, [])
 
   displayedColumns: string[] = [
@@ -36,15 +39,26 @@ export class ItemTableComponent implements OnInit {
   dataSource = new MatTableDataSource<TableModel>();
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
-  constructor(private addEditService: AddEditService, 
-              private httpClient: HttpClient) { }
+  constructor(private router: Router, 
+              private httpClient: HttpClient, 
+              private addEditService: AddEditService) { }
 
   ngOnInit() {
     this.getItem();
     this.dataSource.paginator = this.paginator;
-    this.addEditService.eventEmit.subscribe(
+    /* this.addEditService.eventEmit.subscribe(
       (post: TableModel) => this.dataSource.data.push(post)
-    )
+    ) */
+  }
+
+  ngOnDestroy() {
+    this.sub.unsubscribe();
+  }
+  
+
+  updateElement(id: TableModel) {
+    //this.addEditService.UpdateRow(id)
+    this.router.navigate(['/edit-item', id.id]);
   }
 
   deleteItem(id: TableModel): void {
@@ -64,7 +78,7 @@ export class ItemTableComponent implements OnInit {
     )  */
 
     if(confirm("Confermi di volere eliminare la riga con id " +id.id + "?")) {
-      this.httpClient.delete("http://localhost:3000/items/" + id.id)
+      this.sub = this.httpClient.delete("http://localhost:3000/items/" + id.id)
       .subscribe(
         (res: any[]) => {
           const allElement = this.dataSource.data;
@@ -79,7 +93,7 @@ export class ItemTableComponent implements OnInit {
   }
 
   getItem() {
-    this.httpClient.get('http://localhost:3000/items')
+    this.sub = this.httpClient.get('http://localhost:3000/items')
     .map((response: any) => {
 
     const res = response;
