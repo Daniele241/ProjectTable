@@ -13,4 +13,9 @@ export class AddEditService {
     this.eventEmit.emit(row);
     console.log(row);
   }
+
+  UpdateRow(row: TableModel) {
+    this.eventEmit.emit(row);
+    console.log(row);
+  }
 }
