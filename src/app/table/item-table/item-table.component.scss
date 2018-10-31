@@ -9,7 +9,7 @@ table {
   }
 }
 
-@media not all and (min-resolution:.001dpcm) {
+@media screen and (-webkit-min-device-pixel-ratio:0) {
   .cancella {
     border: none;
     background-color: transparent;
