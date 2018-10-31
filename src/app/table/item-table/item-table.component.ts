@@ -7,7 +7,6 @@ import { Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/RX';
 import { SelectionModel } from '@angular/cdk/collections';
-import { AddEditService } from '../../../service/add-edit.service';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs/RX';
 
@@ -41,7 +40,7 @@ export class ItemTableComponent implements OnInit, OnDestroy {
 
   constructor(private router: Router, 
               private httpClient: HttpClient, 
-              private addEditService: AddEditService) { }
+              ) { }
 
   ngOnInit() {
     this.getItem();
@@ -60,7 +59,7 @@ export class ItemTableComponent implements OnInit, OnDestroy {
     this.router.navigate(['/edit-item', id.id]);
   }
 
-  deleteItem(id: TableModel): void {
+  deleteItem(id: TableModel) {
     /* this.httpClient.delete("http://localhost:3000/items/" + id.id)
     .subscribe(
       (res: any[]) => {

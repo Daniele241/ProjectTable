@@ -6,14 +6,20 @@ import * as _moment from 'moment';
 import * as _rollupMoment from 'moment';
 import { TableModel } from '../../../model/table.model';
 import { AddEditService } from '../../../service/add-edit.service';
-import { RequestOptions, Headers, Http } from '@angular/http';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
 
 const moment = _rollupMoment || _moment;
 let url = "http://localhost:3000/items";
-let headers = new Headers({ 'Content-Type': 'application/json' });
-let options = new RequestOptions({ headers: headers });
+
+let headers = new HttpHeaders();
+headers = headers.set('Content-Type', 'application/json; charset=utf-8');
+
+//let headers = new Headers({ 'Content-Type': 'application/json' });
+//let options = new RequestOptions({ headers: headers });  
+  
 
 export const MY_FORMATS = {
   parse: {
@@ -54,7 +60,7 @@ export class EditRowComponent implements OnInit, OnDestroy {
   _date: Date;
   document: number;
 
-  constructor(private httpClient:Http,
+  constructor(private httpClient:HttpClient,
               private addEditService: AddEditService,
               private router: Router,
               ) { }
@@ -97,6 +103,7 @@ export class EditRowComponent implements OnInit, OnDestroy {
   }
 
   onPost() {
+
     console.log("sono all'interno della funzione");
     let newRow = new TableModel(
       this.plant,
@@ -109,7 +116,7 @@ export class EditRowComponent implements OnInit, OnDestroy {
     )
     this.addEditService.AddRow(newRow);
 
-    this.sub = this.httpClient.post(url, newRow, options)
+    this.sub = this.httpClient.post(url, newRow, {headers: headers})
     .subscribe(
       (error) => console.log(error)
     )
