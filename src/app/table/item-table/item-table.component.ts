@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, Input } from '@angular/core';
+import { Component, OnInit, ViewChild, Input, OnDestroy } from '@angular/core';
 import { TableModel } from '../../../model/table.model';
 import { MatTableDataSource, MatPaginator } from '@angular/material';
 import { HttpClient } from '@angular/common/http';
@@ -55,7 +55,6 @@ export class ItemTableComponent implements OnInit, OnDestroy {
     this.sub.unsubscribe();
   }
   
-
   updateElement(id: TableModel) {
     //this.addEditService.UpdateRow(id)
     this.router.navigate(['/edit-item', id.id]);
