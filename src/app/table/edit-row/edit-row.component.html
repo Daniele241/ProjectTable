@@ -1,5 +1,5 @@
 <div class="container edit-form">
-  <form #myForm="ngForm">
+  <form #editForm="ngForm">
     <mat-form-field>
       <input matInput placeholder="Plant" name="plant" [(ngModel)]="plant">
     </mat-form-field>
@@ -55,7 +55,7 @@
           </i>
         </button>
 
-        <button [disabled]="!myForm.valid" class="ml-4" mat-raised-button color="primary" (click)="onPost()">
+        <button [disabled]="!editForm.valid" class="ml-4" mat-raised-button color="primary" (click)="onPost()">
           Save
           <i class="ml-2 material-icons">
             save
