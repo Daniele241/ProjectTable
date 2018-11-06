@@ -1,17 +1,17 @@
-import { Component, OnInit, ViewChild, Input, OnDestroy } from '@angular/core';
-import { TableModel } from '../../../model/table.model';
+import { Component, OnInit, ViewChild, OnDestroy } from '@angular/core';
+import { SelectionModel } from '@angular/cdk/collections';
+import { Router } from '@angular/router';
 import { MatTableDataSource, MatPaginator } from '@angular/material';
 import { HttpClient } from '@angular/common/http';
-import { Headers } from '@angular/http';
 
 import 'rxjs/add/operator/map';
 import 'rxjs/RX';
-import { SelectionModel } from '@angular/cdk/collections';
-import { Router } from '@angular/router';
 import { Subscription } from 'rxjs/RX';
 
-let headers = new Headers({ 'Content-Type': 'application/json' });
-//let options = new RequestOptions({ headers: headers });
+import { TableModel } from '../../../model/table.model';
+
+let urlGet = "http://localhost:3000/items";
+let urlDelete = "http://localhost:3000/items/";
 
 @Component({
   selector: 'app-item-table',
@@ -42,41 +42,22 @@ export class ItemTableComponent implements OnInit, OnDestroy {
               private httpClient: HttpClient, 
               ) { }
 
-  ngOnInit() {
-    this.getItem();
+  ngOnInit() {   
     this.dataSource.paginator = this.paginator;
-    /* this.addEditService.eventEmit.subscribe(
-      (post: TableModel) => this.dataSource.data.push(post)
-    ) */
+    this.getItem();
   }
 
   ngOnDestroy() {
-    this.sub.unsubscribe();
+    //this.sub.unsubscribe();
   }
   
   updateElement(id: TableModel) {
-    //this.addEditService.UpdateRow(id)
     this.router.navigate(['/edit-item', id.id]);
   }
 
   deleteItem(id: TableModel) {
-    /* this.httpClient.delete("http://localhost:3000/items/" + id.id)
-    .subscribe(
-      (res: any[]) => {
-        res = this.dataSource.data = this.dataSource.data.filter(item => item.id !== id.id)
-        console.log(res);
-      }
-    )  */
-
-     /* this.httpClient.delete("http://localhost:3000/items/" + id.id)
-    .subscribe(
-      (res: any[]) => {
-        this.getItem();
-      }
-    )  */
-
     if(confirm("Confermi di volere eliminare la riga con id " +id.id + "?")) {
-      this.sub = this.httpClient.delete("http://localhost:3000/items/" + id.id)
+      this.sub = this.httpClient.delete(urlDelete + id.id)
       .subscribe(
         (res: any[]) => {
           const allElement = this.dataSource.data;
@@ -91,7 +72,7 @@ export class ItemTableComponent implements OnInit, OnDestroy {
   }
 
   getItem() {
-    this.sub = this.httpClient.get('http://localhost:3000/items')
+    this.sub = this.httpClient.get(urlGet)
     .map((response: any) => {
 
     const res = response;

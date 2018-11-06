@@ -1,24 +1,14 @@
 {
   "items": [
     {
-      "id": 7,
-      "plant": "ciao",
-      "competitorCode": "ciao",
-      "competitor": "ciao",
-      "productCode": "123",
-      "product": "ciao",
-      "Date": "2018-10-25T22:00:00.000Z",
-      "document": "123"
-    },
-    {
-      "id": 8,
-      "plant": "ciao",
-      "competitorCode": "ciao",
-      "competitor": "ciao",
-      "productCode": "1",
-      "product": "s",
+      "plant": "a",
+      "competitorCode": "a",
+      "competitor": "a",
+      "productCode": 12,
+      "product": "angular 11",
       "Date": "2018-10-23T22:00:00.000Z",
-      "document": "123"
+      "document": 123,
+      "id": 8
     },
     {
       "plant": "DAN",
@@ -27,7 +17,7 @@
       "productCode": "1",
       "product": "DAN",
       "Date": "2018-10-25T22:00:00.000Z",
-      "document": "123",
+      "document": 124,
       "id": 9
     },
     {
@@ -39,16 +29,6 @@
       "Date": "2018-10-17T22:00:00.000Z",
       "document": "1234",
       "id": 10
-    },
-    {
-      "plant": "Ciao 1",
-      "competitorCode": "Ciao 2",
-      "competitor": "Ciao 2",
-      "productCode": "2",
-      "product": "Ciao 2",
-      "Date": "2018-10-17T22:00:00.000Z",
-      "document": "21312543",
-      "id": 12
     },
     {
       "plant": "Ciao",
@@ -81,18 +61,164 @@
       "id": 15
     },
     {
-      "plant": "",
-      "competitorCode": "",
-      "competitor": "",
-      "product": "",
+      "plant": "c",
+      "competitorCode": "c",
+      "competitor": "c",
+      "productCode": "1",
+      "product": "d",
+      "Date": "2018-10-09T22:00:00.000Z",
+      "document": "123",
       "id": 16
     },
     {
-      "plant": "",
-      "competitorCode": "",
-      "competitor": "",
-      "product": "",
+      "plant": "Daniele1",
+      "competitorCode": "Daniele1",
+      "competitor": "Daniele1",
+      "productCode": "1",
+      "product": "Daniele1",
+      "Date": "2018-11-13T23:00:00.000Z",
+      "document": "1234",
       "id": 17
+    },
+    {
+      "plant": "Daniele 2",
+      "competitorCode": "Daniele 2",
+      "competitor": "Daniele 2",
+      "productCode": "12",
+      "product": "Daniele 2",
+      "Date": "2018-11-29T23:00:00.000Z",
+      "document": "1214",
+      "id": 19
+    },
+    {
+      "plant": "Daniele 2",
+      "competitorCode": "Daniele 2",
+      "competitor": "Daniele 2",
+      "productCode": "12",
+      "product": "Daniele 2",
+      "Date": "2018-11-14T23:00:00.000Z",
+      "document": "124",
+      "id": 20
+    },
+    {
+      "plant": "Daniele 2",
+      "competitorCode": "Daniele 2",
+      "competitor": "Daniele 2",
+      "productCode": "12",
+      "product": "Daniele 2",
+      "Date": "2018-11-14T23:00:00.000Z",
+      "document": "1234",
+      "id": 21
+    },
+    {
+      "plant": "Daniele 2",
+      "competitorCode": "Daniele 2",
+      "competitor": "Daniele 2",
+      "productCode": "12",
+      "product": "Daniele 2",
+      "Date": "2018-11-15T23:00:00.000Z",
+      "document": "123",
+      "id": 22
+    },
+    {
+      "plant": "Daniele 2",
+      "competitorCode": "Daniele 2",
+      "competitor": "Daniele 2",
+      "productCode": "1",
+      "product": "Daniele 2",
+      "Date": "2018-11-21T23:00:00.000Z",
+      "document": "1",
+      "id": 23
+    },
+    {
+      "plant": "Daniele 2",
+      "competitorCode": "Daniele 2",
+      "competitor": "Daniele 2",
+      "productCode": "12",
+      "product": "Daniele 2",
+      "Date": "2018-11-20T23:00:00.000Z",
+      "document": "12",
+      "id": 24
+    },
+    {
+      "plant": "Daniele 2",
+      "competitorCode": "Daniele 2",
+      "competitor": "Daniele 2",
+      "productCode": "123",
+      "product": "Daniele 2",
+      "Date": "2018-11-22T23:00:00.000Z",
+      "document": "123",
+      "id": 26
+    },
+    {
+      "plant": "Ciao3",
+      "competitorCode": "Ciao2",
+      "competitor": "Ciao4",
+      "productCode": "12345",
+      "product": "Ciao4",
+      "Date": "2018-11-21T23:00:00.000Z",
+      "document": "123",
+      "id": 27
+    },
+    {
+      "plant": "Ciao9",
+      "competitorCode": "Ciao9",
+      "competitor": "Ciao9",
+      "productCode": "1234",
+      "product": "Ciao9",
+      "Date": "2018-11-20T23:00:00.000Z",
+      "document": "444",
+      "id": 28
+    },
+    {
+      "plant": "aa",
+      "competitorCode": "aaa",
+      "competitor": "aa",
+      "productCode": "123",
+      "product": "aaa",
+      "Date": "2018-11-14T23:00:00.000Z",
+      "document": "123",
+      "id": 32
+    },
+    {
+      "plant": "ccc",
+      "competitorCode": "ccc",
+      "competitor": "ccc",
+      "productCode": "123",
+      "product": "ccc",
+      "Date": "2018-11-13T23:00:00.000Z",
+      "document": "123",
+      "id": 33
+    },
+    {
+      "plant": "ddd",
+      "competitorCode": "ddd",
+      "competitor": "ddd",
+      "productCode": "123",
+      "product": "ddd",
+      "Date": "2018-11-20T23:00:00.000Z",
+      "document": "34",
+      "id": 34
+    },
+    {
+      "plant": "DaniELE",
+      "competitorCode": "DaniELE",
+      "competitor": "DaniELE",
+      "productCode": 21,
+      "product": "Daniele",
+      "Date": "2018-11-22T23:00:00.000Z",
+      "document": 478,
+      "id": 44
+    },
+    {
+      "plant": "Ciao",
+      "competitorCode": "Ciao  ",
+      "competitor": "Ciao11",
+      "productCode": 123,
+      "product": "Ciao",
+      "Date": "2018-11-20T23:00:00.000Z",
+      "document": 124,
+      "id": 46
     }
   ]
 }

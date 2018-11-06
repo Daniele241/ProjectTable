@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { TableComponent } from './table/table.component';
-import { ComposedPageComponent } from './composed-page/composed-page.component';
+import { ComposedComponent } from './composed/composed.component';
 
 const routes: Routes = [
-  { path: '', component: TableComponent },
+  { path: '', redirectTo: '/composed', pathMatch: 'full' },
   { path: 'table', component: TableComponent },
-  { path: 'edit-item/:id', component: ComposedPageComponent },
-  { path: 'add-item', component: ComposedPageComponent },
+  { path: 'edit-item/:id', component: ComposedComponent },
+  { path: 'add-item', component: ComposedComponent },
   { path: '**', component: TableComponent }
 ];
 

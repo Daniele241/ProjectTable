@@ -1,0 +1,99 @@
+<form [formGroup]="signUpForm" 
+      (ngSubmit)="submitClick()" 
+      *ngIf="signUpForm">
+        <div class="container edit-form">
+          <mat-form-field>
+            <input 
+              type="text"
+              matInput
+              placeholder="Plant" 
+              formControlName="plant">
+          </mat-form-field>
+       
+      
+        <mat-form-field>
+          <input 
+            type="text"
+            matInput 
+            placeholder="Competitor Code" 
+            formControlName="competitorCode">
+        </mat-form-field>
+
+      
+        <mat-form-field>
+          <input 
+            type="text"
+            matInput 
+            placeholder="Competitor" 
+            formControlName="competitor">
+        </mat-form-field>
+    
+      
+      
+        <mat-form-field>
+          <input 
+            type="number"
+            matInput 
+            placeholder="Product code" 
+            formControlName="productCode">
+        </mat-form-field>
+    
+      
+    
+        <mat-form-field>
+          <input 
+            type="text"
+            matInput 
+            placeholder="Product" 
+            formControlName="product">
+        </mat-form-field>
+    
+        <mat-form-field class="date">
+          <input 
+            type="date"
+            matInput 
+            [matDatepicker]="dp" 
+            placeholder="Date" 
+            formControlName="_date">
+          <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+          <mat-datepicker #dp></mat-datepicker>
+        </mat-form-field>
+    
+        <mat-form-field>
+          <input 
+            type="number"
+            matInput 
+            placeholder="Document Number" 
+            formControlName="document">
+        </mat-form-field>
+
+      </div>
+  
+  <hr>
+  
+  <div class="container">
+    <div class="float-right">
+        <button (click)="onCancel()" mat-raised-button color="primary" type="button">
+          Cancel
+          <i class="ml-2 material-icons">
+            arrow_back
+          </i>
+        </button>
+        
+
+          <button
+          class="ml-4" 
+          mat-raised-button color="primary" 
+          type="button" 
+          [disabled]="!signUpForm.valid" 
+          (click)="submitClick()"> 
+            {{buttonText}}
+            <i class="ml-2 material-icons">
+              save
+            </i>
+        </button>
+    </div>
+  </div>
+</form>
+
+

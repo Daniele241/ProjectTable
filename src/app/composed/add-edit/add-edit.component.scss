@@ -1,0 +1,21 @@
+.edit-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .edit-form>* {
+    width: 100%;
+  }
+  
+  .quantity .mat-form-field {
+    float: left;
+    width: 70%;
+  }
+  
+  /* input.ng-invalid.ng-touched {
+    border: 1px solid red;
+  } */
+  
+  /* span.ng-star-inserted {
+    color: red;
+  } */
